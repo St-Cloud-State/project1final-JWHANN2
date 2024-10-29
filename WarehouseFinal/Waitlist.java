@@ -1,50 +1,51 @@
-import java.io.*;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Waitlist {
-    
-    private List<WaitlistClient> list = new LinkedList<>();
+    private Queue<WaitlistClient> waitlistQueue;
 
-    public Waitlist(){
+    public Waitlist() {
+        waitlistQueue = new LinkedList<>();
     }
 
-    public Waitlist(Iterator<WaitlistClient> copyList) {
-        while(copyList.hasNext()) {
-            list.add(copyList.next());
-        }
+    // Adds a client to the waitlist for a specific product quantity
+    public void addWaitlistClient(String clientId, int quantity) {
+        WaitlistClient waitlistClient = new WaitlistClient(clientId, quantity);
+        waitlistQueue.add(waitlistClient);
+        System.out.println("Added client " + clientId + " to waitlist for quantity: " + quantity);
     }
 
-    public Iterator<WaitlistClient> getWaitlist() {
-        return list.iterator();
-    }
+    // Processes waitlist based on available stock, in FIFO order
+    public void processWaitlist(Product product) {
+        int availableQuantity = product.getQuantity();
+        while (!waitlistQueue.isEmpty() && availableQuantity > 0) {
+            WaitlistClient waitlistClient = waitlistQueue.peek();
+            int requestedQuantity = waitlistClient.getQuantity();
 
-    public boolean addClient(String clientId, int quantity) {
-        WaitlistClient client = new WaitlistClient(clientId, quantity);
-        list.add(client);
-        return true;
-    }
-
-    public boolean removeClient(String clientId) {
-        Iterator<WaitlistClient> iterator = list.iterator();
-        while(iterator.hasNext()) {
-            WaitlistClient client = iterator.next();
-            if(client.getClientId() == clientId) {
-                iterator.remove();
-                return true;
+            if (availableQuantity >= requestedQuantity) {
+                availableQuantity -= requestedQuantity;
+                System.out.println("Fulfilling waitlist for client " + waitlistClient.getClientId() +
+                                   " with quantity: " + requestedQuantity);
+                waitlistQueue.poll(); // Remove client from waitlist as their request is fulfilled
+            } else {
+                waitlistClient.setQuantity(requestedQuantity - availableQuantity);
+                System.out.println("Partially fulfilling waitlist for client " + waitlistClient.getClientId() +
+                                   " with available quantity: " + availableQuantity);
+                availableQuantity = 0; // All stock is used up
             }
         }
-        return false;
+        product.setQuantity(availableQuantity); // Update the product's stock after processing waitlist
     }
 
-    public boolean setQuantity(String clientId, int quantity) {
-        Iterator<WaitlistClient> iterator = list.iterator();
-        while(iterator.hasNext()) {
-            WaitlistClient client = iterator.next();
-            if(client.getClientId() == clientId) {
-                client.setQuantity(quantity);
-                return true;
+    // Prints the current waitlist
+    public void printWaitlist() {
+        if (waitlistQueue.isEmpty()) {
+            System.out.println("The waitlist is currently empty.");
+        } else {
+            System.out.println("Current waitlist:");
+            for (WaitlistClient client : waitlistQueue) {
+                System.out.println("Client ID: " + client.getClientId() + ", Requested Quantity: " + client.getQuantity());
             }
         }
-        return false;
     }
 }

@@ -1,90 +1,48 @@
-import java.io.Serializable;
-import java.util.*;
+import java.util.Map;
+import java.util.HashMap;
 
-public class Client implements Serializable {
-    private static final long serialVersionUID = 1L;
-    private String clientId;
-    private String clientName;
-    private static final String CLIENT_STRING = "C";
-    private Wishlist wishlist;
-    private List<String> invoices;
-    private double creditBalance;
-    private double debitBalance;
+public class Client {
+    private String id;
+    private String name;
+    private double balance;
+    private Map<Product, Integer> wishlist;
 
-    // Constructor to create a Client object with a name
-    public Client(String clientName) {
-        this.clientName = clientName;
-        this.clientId = CLIENT_STRING + ClientIdServer.instance().getId(); // Generating unique client ID
-        this.wishlist = new Wishlist();
-        this.invoices = new LinkedList<String>();
-        this.creditBalance = 0;
-        this.debitBalance = 0;
+    public Client(String id, String name) {
+        this.id = id;
+        this.name = name;
+        this.balance = 0.0;
+        this.wishlist = new HashMap<>();
     }
 
-    // Getter for client name
-    public String getClientName() {
-        return clientName;
+    public String getId() {
+        return id;
     }
 
-    // Getter for client ID
-    public String getClientId() {
-        return clientId;
+    public Map<Product, Integer> getWishlist() {
+        return wishlist;
     }
 
-    // Setter for client name
-    public void setClientName(String newClientName) {
-        this.clientName = newClientName;
+    public void addDebit(double amount) {
+        balance -= amount;
     }
 
-    // Equals method to compare clients by ID
-    public boolean equals(String id) {
-        return this.clientId.equals(id);
+    public void addCredit(double amount) {
+        balance += amount;
     }
 
     @Override
     public String toString() {
-        return "Client Name: " + clientName + ", Client ID: " + clientId + ", Cedit Balance: "
-            + creditBalance + ", Debit Balance: " + debitBalance;
+        return "Client ID: " + id + ", Name: " + name + ", Balance: $" + balance;
     }
 
-    public boolean addToWishlist(Product product) {
-        return wishlist.insertProduct(product);
+    public void addToWishlist(Product product, int quantity) {
+        wishlist.put(product, wishlist.getOrDefault(product, 0) + quantity);
     }
 
-    public boolean removeFromWishlist(String productId) {
-        return wishlist.removeProduct(productId);
-    }
-
-    public Iterator<Product> getWishlist() {
-        return wishlist.getProducts();
-    }
-
-    public void clearWishlist() {
-        this.wishlist = new Wishlist();
-    }
-
-    public boolean addInvoice(String invoice) {
-        invoices.add(invoice);
-        return true;
-    }
-
-    public Iterator<String> getInvoices() {
-        return invoices.iterator();
-    }
-
-    public void addCredit(double credit) {
-        if(debitBalance > credit) debitBalance = debitBalance - credit;
-        else {
-            debitBalance = 0;
-            creditBalance = credit + creditBalance - debitBalance;
-        }
-    }
-
-    public void addDebit(double debit) {
-        if(creditBalance > debit) creditBalance = creditBalance - debit;
-        else {
-            creditBalance = 0;
-            debitBalance = debit + debitBalance - creditBalance;
-        }
+    public void printWishlist() {
+        System.out.println("Wishlist for client " + name + ":");
+        wishlist.forEach((product, quantity) -> {
+            System.out.println("Product: " + product.getProductId() + ", Name: " + product + ", Quantity: " + quantity);
+        });
     }
 }

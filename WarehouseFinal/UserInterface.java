@@ -1,12 +1,11 @@
 import java.util.Scanner;
-import java.util.Iterator; // Import added for Iterator
 
 public class UserInterface {
     private Warehouse warehouse;
     private Scanner scanner;
 
     public UserInterface() {
-        warehouse = new Warehouse(); // Ensure this constructor is public
+        warehouse = new Warehouse();
         scanner = new Scanner(System.in);
     }
 
@@ -20,10 +19,11 @@ public class UserInterface {
             System.out.println("3. Add Product");
             System.out.println("4. Display All Products");
             System.out.println("5. Add to Wishlist");
-            System.out.println("6. Place Order");
-            System.out.println("7. Record Payment");
-            System.out.println("8. Receive Shipment");
-            System.out.println("9. Display Product Waitlist");
+            System.out.println("6. Print Client Wishlist");
+            System.out.println("7. Place Order");
+            System.out.println("8. Record Payment");
+            System.out.println("9. Receive Shipment");
+            System.out.println("10. Print Product Waitlist");
             System.out.println("0. Exit");
             System.out.print("Choose an option: ");
 
@@ -32,7 +32,7 @@ public class UserInterface {
 
             switch (choice) {
                 case 1:
-                    addClient();
+                    addClient(); // Adding Client using updated method
                     break;
                 case 2:
                     displayAllClients();
@@ -47,16 +47,19 @@ public class UserInterface {
                     addToWishlist();
                     break;
                 case 6:
-                    placeOrder();
+                    printWishlist();
                     break;
                 case 7:
-                    recordPayment();
+                    placeOrder();
                     break;
                 case 8:
-                    receiveShipment();
+                    recordPayment();
                     break;
                 case 9:
-                    displayProductWaitlist();
+                    receiveShipment();
+                    break;
+                case 10:
+                    printWaitlist();
                     break;
                 case 0:
                     running = false;
@@ -68,16 +71,19 @@ public class UserInterface {
         System.out.println("Exiting system...");
     }
 
+    // Prompts for client ID and name, then adds to the warehouse
     private void addClient() {
+        System.out.print("Enter client ID (e.g., c1): ");
+        String id = scanner.nextLine();
         System.out.print("Enter client name: ");
         String name = scanner.nextLine();
-        Client client = new Client(name); // Adjusted constructor to match existing signature
+        
+        Client client = new Client(id, name); // Pass both id and name
         warehouse.addClient(client);
         System.out.println("Client added successfully.");
     }
 
     private void displayAllClients() {
-        // Assuming Warehouse maintains a collection of clients
         for (Client client : warehouse.getClientList()) {
             System.out.println(client);
         }
@@ -109,24 +115,30 @@ public class UserInterface {
         String clientId = scanner.nextLine();
         System.out.print("Enter product ID: ");
         String productId = scanner.nextLine();
+        System.out.print("Enter quantity: ");
+        int quantity = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
         Product product = warehouse.getProductById(productId);
         if (product != null) {
-            warehouse.addToWishlist(clientId, product); // Assuming Warehouse handles wishlist
+            warehouse.addToWishlist(clientId, product, quantity);
         } else {
             System.out.println("Product not found.");
         }
     }
 
-    private void placeOrder() {
+    private void printWishlist() {
         System.out.print("Enter client ID: ");
         String clientId = scanner.nextLine();
-        System.out.print("Enter product ID: ");
-        String productId = scanner.nextLine();
-        System.out.print("Enter quantity: ");
-        int quantity = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
-        warehouse.processOrder(clientId, productId, quantity);
+        warehouse.printClientWishlist(clientId);
     }
+
+    private void placeOrder() {
+    System.out.print("Enter client ID: ");
+    String clientId = scanner.nextLine();
+    warehouse.processOrder(clientId); // Process the entire wishlist
+}
+
 
     private void recordPayment() {
         System.out.print("Enter client ID: ");
@@ -145,23 +157,16 @@ public class UserInterface {
         int quantity = scanner.nextInt();
         scanner.nextLine(); // Consume newline
         warehouse.receiveShipment(productId, quantity);
-        System.out.println("Shipment received and processed.");
     }
 
-    private void displayProductWaitlist() {
-        System.out.print("Enter product ID: ");
+    // New method to print the waitlist for a specific product
+    private void printWaitlist() {
+        System.out.print("Enter product ID to view waitlist: ");
         String productId = scanner.nextLine();
-        Product product = warehouse.getProductById(productId);
-        if (product != null) {
-            System.out.println("Waitlist for Product " + productId + ":");
-            Iterator<WaitlistClient> waitlist = product.getWaitlist();
-            while (waitlist.hasNext()) {
-                System.out.println(waitlist.next());
-            }
-        } else {
-            System.out.println("Product not found.");
-        }
+        warehouse.printProductWaitlist(productId); // Corrected call to print waitlist
     }
+    
+
 
     public static void main(String[] args) {
         UserInterface ui = new UserInterface();

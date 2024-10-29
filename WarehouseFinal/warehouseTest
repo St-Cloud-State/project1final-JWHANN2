@@ -1,0 +1,666 @@
+Script started on 2024-10-29 21:12:53+00:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="81" LINES="16"]
+[0;32m@JWHANN2 [0m➜ [1;34m/workspaces/project1final-JWHANN2/WarehouseFinal [0;36m([1;31mmain[0;36m) [0m$ javac UserIn ertface.java
+error: file not found: UserInertface.java
+Usage: javac <options> <source files>
+use --help for a list of possible options
+[0;32m@JWHANN2 [1;31m➜ [1;34m/workspaces/project1final-JWHANN2/WarehouseFinal [0;36m([1;31mmain[0;36m) [0m$ javac UserIn terface.java
+[0;32m@JWHANN2 [0m➜ [1;34m/workspaces/project1final-JWHANN2/WarehouseFinal [0;36m([1;31mmain[0;36m) [0m$ java UserInt erface
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 1
+Enter client ID (e.g., c1): c1
+Enter client name: c1
+Client added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 1
+Enter client ID (e.g., c1): c2
+Enter client name: c2
+Client added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 1
+Enter client ID (e.g., c1): c3
+Enter client name: c3
+Client added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 1
+Enter client ID (e.g., c1): c4
+Enter client name: c4
+Client added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 1
+Enter client ID (e.g., c1): c5
+Enter client name: c5
+Client added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 2
+Client ID: c1, Name: c1, Balance: $0.0
+Client ID: c2, Name: c2, Balance: $0.0
+Client ID: c3, Name: c3, Balance: $0.0
+Client ID: c4, Name: c4, Balance: $0.0
+Client ID: c5, Name: c5, Balance: $0.0
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 3
+Enter product ID: p1
+Enter product name: p1
+Enter product quantity: 10
+Enter product price: 1
+Product added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 3
+Enter product ID: p2
+Enter product name: p2
+Enter product quantity: 20
+Enter product price: 2
+Product added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 3
+Enter product ID: p3
+Enter product name: p3
+Enter product quantity: 30
+Enter product price: 3
+Product added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 3
+Enter product ID: p4
+Enter product name: p4
+Enter product quantity: 40
+Enter product price: 4
+Product added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: p 3
+Enter product ID: p5
+Enter product name: p5
+Enter product quantity: 50
+Enter product price: 5
+Product added successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 4
+Product ID: p1, Name: p1, Quantity: 10, Price: $1.0
+Product ID: p2, Name: p2, Quantity: 20, Price: $2.0
+Product ID: p3, Name: p3, Quantity: 30, Price: $3.0
+Product ID: p4, Name: p4, Quantity: 40, Price: $4.0
+Product ID: p5, Name: p5, Quantity: 50, Price: $5.0
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c1
+Enter product ID: p1
+Enter quantity: 5
+Added client c1 to waitlist for quantity: 5
+Added client c1 to waitlist for product p1
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c1
+Enter product ID: p3
+Enter quantity: 5
+Added client c1 to waitlist for quantity: 5
+Added client c1 to waitlist for product p3
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c1
+Enter product ID: p5
+Enter quantity: 5
+Added client c1 to waitlist for quantity: 5
+Added client c1 to waitlist for product p5
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c1
+Wishlist for client c1:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 10, Price: $1.0, Quantity: 5
+Product: p3, Name: Product ID: p3, Name: p3, Quantity: 30, Price: $3.0, Quantity: 5
+Product: p5, Name: Product ID: p5, Name: p5, Quantity: 50, Price: $5.0, Quantity: 5
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c2
+Enter product ID: p1
+Enter quantity: 7
+Added client c2 to waitlist for quantity: 7
+Added client c2 to waitlist for product p1
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c2
+Enter product ID: p2
+Enter quantity: 7
+Added client c2 to waitlist for quantity: 7
+Added client c2 to waitlist for product p2
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c2
+Enter product ID: p5 4
+Enter quantity: 7
+Added client c2 to waitlist for quantity: 7
+Added client c2 to waitlist for product p4
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c2
+Wishlist for client c2:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 10, Price: $1.0, Quantity: 7
+Product: p4, Name: Product ID: p4, Name: p4, Quantity: 40, Price: $4.0, Quantity: 7
+Product: p2, Name: Product ID: p2, Name: p2, Quantity: 20, Price: $2.0, Quantity: 7
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c3
+Enter product ID: p1
+Enter quantity: 6
+Added client c3 to waitlist for quantity: 6
+Added client c3 to waitlist for product p1
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c3
+Enter product ID: p2
+Enter quantity: 6
+Added client c3 to waitlist for quantity: 6
+Added client c3 to waitlist for product p2
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 5
+Enter client ID: c3
+Enter product ID: p5
+Enter quantity: 6
+Added client c3 to waitlist for quantity: 6
+Added client c3 to waitlist for product p5
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c3
+Wishlist for client c3:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 10, Price: $1.0, Quantity: 6
+Product: p5, Name: Product ID: p5, Name: p5, Quantity: 50, Price: $5.0, Quantity: 6
+Product: p2, Name: Product ID: p2, Name: p2, Quantity: 20, Price: $2.0, Quantity: 6
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: c 7
+Enter client ID: c2
+Fulfilled 7 of p1 for client c2
+Fulfilled 7 of p4 for client c2
+Fulfilled 7 of p2 for client c2
+Total cost of $49.0 deducted from client c2's balance.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 7
+Enter client ID: c3
+Added client c3 to waitlist for quantity: 3
+Added 3 of p1 to waitlist for client c3
+Fulfilled 6 of p5 for client c3
+Fulfilled 6 of p2 for client c3
+Total cost of $42.0 deducted from client c3's balance.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c2
+Wishlist for client c2:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 0, Price: $1.0, Quantity: 7
+Product: p4, Name: Product ID: p4, Name: p4, Quantity: 33, Price: $4.0, Quantity: 7
+Product: p2, Name: Product ID: p2, Name: p2, Quantity: 7, Price: $2.0, Quantity: 7
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c3
+Wishlist for client c3:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 0, Price: $1.0, Quantity: 9
+Product: p5, Name: Product ID: p5, Name: p5, Quantity: 44, Price: $5.0, Quantity: 6
+Product: p2, Name: Product ID: p2, Name: p2, Quantity: 7, Price: $2.0, Quantity: 6
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 10
+Enter product ID to view waitlist: p1
+Current waitlist:
+Client ID: c1, Requested Quantity: 5
+Client ID: c2, Requested Quantity: 7
+Client ID: c3, Requested Quantity: 6
+Client ID: c3, Requested Quantity: 3
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 10
+Enter product ID to view waitlist: p2
+Current waitlist:
+Client ID: c2, Requested Quantity: 7
+Client ID: c3, Requested Quantity: 6
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 7
+Enter client ID: c1
+Added client c1 to waitlist for quantity: 5
+Added 5 of p1 to waitlist for client c1
+Fulfilled 5 of p3 for client c1
+Fulfilled 5 of p5 for client c1
+Total cost of $40.0 deducted from client c1's balance.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 6
+Enter client ID: c1
+Wishlist for client c1:
+Product: p1, Name: Product ID: p1, Name: p1, Quantity: 0, Price: $1.0, Quantity: 10
+Product: p3, Name: Product ID: p3, Name: p3, Quantity: 25, Price: $3.0, Quantity: 5
+Product: p5, Name: Product ID: p5, Name: p5, Quantity: 39, Price: $5.0, Quantity: 5
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 8
+Enter client ID: c1
+Enter payment amount: 100
+Payment of $100.0 recorded for client c1
+Payment recorded successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 8
+Enter client ID: c2
+Enter payment amount: 100
+Payment of $100.0 recorded for client c2
+Payment recorded successfully.
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Display All Clients
+3. Add Product
+4. Display All Products
+5. Add to Wishlist
+6. Print Client Wishlist
+7. Place Order
+8. Record Payment
+9. Receive Shipment
+10. Print Product Waitlist
+0. Exit
+Choose an option: 2
+Client ID: c1, Name: c1, Balance: $60.0
+Client ID: c2, Name: c2, Balance: $51.0
+Client ID: c3, Name: c3, Balance: $-42.0
+Client ID: c4, Name: c4, Balance: $0.0
+Client ID: c5, Name: c5, Balance: $0.0
+
+--- Warehouse System Menu ---
+1. Add Client
+2. Displ
